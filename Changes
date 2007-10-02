@@ -1,3 +1,8 @@
+[Changes for 0.02 - 2007-10-02]
+
+* Removed references to Test::Kvasir::* since these are not installed anymore
+* Doesn't require the non-existing Perl 5.6.20 (5.00602) anymore. Spotted by David Cantrell. [BUG]
+
 [Changes for 0.01 - 2007-10-01]
 
 * Initial release to CPAN

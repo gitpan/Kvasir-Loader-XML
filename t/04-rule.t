@@ -11,8 +11,8 @@ use Kvasir::Loader::XML;
 my $loader = Kvasir::Loader::XML->_new();
 my $engine = $loader->load_string(q{
     <engine>
-        <rule name="rule1" instanceOf="Test::Kvasir::Rule"/>
-        <rule name="rule2" instanceOf="Test::Kvasir::Rule">
+        <rule name="rule1" instanceOf="Kvasir::Rule"/>
+        <rule name="rule2" instanceOf="Kvasir::Rule">
             <arg1>1</arg1>
             <arg2/>
         </rule>
@@ -26,14 +26,14 @@ my $engine = $loader->load_string(q{
             <rule>rule3</rule>
         </ruleset>
         
-        <ruleset name="by_class" rulesOfClass="Test::Kvasir::Rule"/>
+        <ruleset name="by_class" rulesOfClass="Kvasir::Rule"/>
     </engine>
 });
 
 is_deeply([sort $engine->rules], [qw(rule1 rule2 rule3)]);
 
 my $rule = $engine->_get_rule("rule1");
-is($rule->_pkg, "Test::Kvasir::Rule");
+is($rule->_pkg, "Kvasir::Rule");
 
 $rule = $engine->_get_rule("rule2");
 is_deeply($rule->_args->[0], { arg1 => 1, arg2 => undef});
@@ -45,7 +45,7 @@ ok(exists $loader->_ruleset->{specific_rules});
 is_deeply($loader->_ruleset->{specific_rules}, [qw(rule1 rule3)]);
 
 ok(exists $loader->_ruleset->{by_class});
-is_deeply($loader->_ruleset->{by_class}, [qw(rule1 rule2)]);
+is_deeply($loader->_ruleset->{by_class}, [qw(rule1 rule2 rule3)]);
 
 # some errors
 throws_ok {

@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                Kvasir-Loader-XML
-version:             0.01
+version:             0.02
 abstract:            Load Kvasir engine declarations in XML
 license:             MIT
 generated_by:        ExtUtils::MakeMaker version 6.36
