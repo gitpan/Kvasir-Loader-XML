@@ -8,7 +8,7 @@ WriteMakefile(
     VERSION_FROM        => 'lib/Kvasir/Loader/XML.pm',
     LICENSE             => 'MIT',
     PREREQ_PM           => {
-        Kvasir              => 0.05,
+        Kvasir              => 0.07,
         Object::Tiny        => 0,
         Scalar::Util        => 0,
         Test::Exception     => 0,

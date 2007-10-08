@@ -1,3 +1,7 @@
+[Changes for 0.03 - 2007-10-08]
+
+* Added support for defaults introduced in Kvasir 0.07
+
 [Changes for 0.02 - 2007-10-02]
 
 * Removed references to Test::Kvasir::* since these are not installed anymore

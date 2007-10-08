@@ -23,4 +23,4 @@ my $output = $engine->_get_output("output1");
 is($output->_pkg, "Kvasir::Output");
 
 $output = $engine->_get_output("output2");
-is_deeply($output->_args->[0], { arg1 => 1, arg2 => undef});
+is_deeply($output->_args, [ arg1 => 1, arg2 => undef ]);

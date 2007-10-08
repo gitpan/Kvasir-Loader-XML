@@ -36,7 +36,7 @@ my $rule = $engine->_get_rule("rule1");
 is($rule->_pkg, "Kvasir::Rule");
 
 $rule = $engine->_get_rule("rule2");
-is_deeply($rule->_args->[0], { arg1 => 1, arg2 => undef});
+is_deeply($rule->_args, [ arg1 => 1, arg2 => undef ]);
 
 ok(exists $loader->_ruleset->{all_rules});
 is_deeply($loader->_ruleset->{all_rules}, [qw(rule1 rule2)]);

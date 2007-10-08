@@ -30,4 +30,4 @@ my $hook = $engine->_get_hook("hook1");
 is($hook->_pkg, "Kvasir::Hook");
 
 $hook = $engine->_get_hook("hook2");
-is_deeply($hook->_args->[0], { arg1 => 1, arg2 => undef});
+is_deeply($hook->_args, [ arg1 => 1, arg2 => undef ]);

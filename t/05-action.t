@@ -23,4 +23,4 @@ my $action = $engine->_get_action("action1");
 is($action->_pkg, "Kvasir::Action");
 
 $action = $engine->_get_action("action2");
-is_deeply($action->_args->[0], { arg1 => 1, arg2 => undef});
+is_deeply($action->_args, [ arg1 => 1, arg2 => undef ]);

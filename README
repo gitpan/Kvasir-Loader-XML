@@ -33,6 +33,8 @@ XXMMLL DDooccuummeenntt ssttrruuccttuurree
 
        +o   <<aaccttiioonn>> - Declares an action.
 
+       +o   <<ddeeffaauullttss>> - Defines a default argument set
+
        +o   <<iinnppuutt>> - Declares an input.
 
        +o   <<oouuttppuutt>> - Declares an output.
@@ -55,6 +57,11 @@ XXMMLL DDooccuummeenntt ssttrruuccttuurree
            The class that implements the entity and that'll be instansiated
            when the engine is runned.
 
+       defaults
+           The default arguments to the entity as defined by a previously
+           declared <<ddeeffaauullttss>>.  Separate multiple defaults with comma and/or
+           whitespace.
+
        If the class defined by _i_n_s_t_a_n_c_e_O_f implements the method
        "process_xml_loader_args" it will be called as a class method with the
        "XML::LibXML::Element"-element as only argument. This method must
@@ -66,6 +73,13 @@ XXMMLL DDooccuummeenntt ssttrruuccttuurree
        its text content its value. If a child is an empty element, that is has
        no children (as in "<foo/>") its value will be undef. This hash will be
        passed to the constructor as a hash reference.
+
+       DDeeffaauullttss
+
+       By using the tag <<ddeeffaauullttss>> t is possible to declare common arguments
+       that can be reused by multiple entities. Its children will be inter-
+       preted as key/value pairs. The required attribute 'name' defines the
+       name for the defaults.
 
        RRuulleesseettss
 
@@ -143,4 +157,4 @@ LLIICCEENNCCEE AANNDD CCOOPPYYRRIIGGHHTT
 
 
 
-perl v5.8.6                       2007-10-01            Kvasir::Loader::XML(3)
+perl v5.8.6                       2007-10-08            Kvasir::Loader::XML(3)

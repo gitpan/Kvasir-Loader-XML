@@ -23,4 +23,4 @@ my $input = $engine->_get_input("input1");
 is($input->_pkg, "Kvasir::Input");
 
 $input = $engine->_get_input("input2");
-is_deeply($input->_args->[0], { arg1 => 1, arg2 => undef});
+is_deeply($input->_args, [ arg1 => 1, arg2 => undef ]);
