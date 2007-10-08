@@ -12,7 +12,7 @@ use Kvasir::Util qw(is_existing_package);
 
 use Object::Tiny qw(_ruleset);
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 sub _new {
     my ($pkg) = @_;
